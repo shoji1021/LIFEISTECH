@@ -1,13 +1,25 @@
-from flask import Flask, request, jsonify
-from flask_cors import CORS
+from flask import Flask, request, jsonify, send_from_directory, send_file
 import smtplib
 from email.mime.text import MIMEText
 import os
 
-
 app = Flask(__name__)
-CORS(app)  # フロントからのクロスオリジン通信許可
 
+# --- 静的ファイル配信 ---
+@app.route('/assets/<path:filename>')
+def assets(filename):
+    return send_from_directory('frontend/dist/assets', filename)
+
+@app.route('/image/<path:filename>')
+def image(filename):
+    return send_from_directory('frontend/dist/image', filename)
+
+# --- index.html ---
+@app.route('/')
+def index():
+    return send_file('frontend/dist/index.html')
+
+# --- メール通知API ---
 @app.route('/notify', methods=['POST'])
 def notify():
     data = request.json
