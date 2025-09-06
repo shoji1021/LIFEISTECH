@@ -9,6 +9,7 @@ app = Flask(__name__)
 @app.route('/assets/<path:filename>')
 def assets(filename):
     return send_from_directory('frontend/dist/assets', filename)
+    
 
 @app.route('/image/<path:filename>')
 def image(filename):
