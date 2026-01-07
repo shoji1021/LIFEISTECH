@@ -8,15 +8,15 @@
     
     <section class="features">
       <div class="feature-card1">
-        <h3>📹 リアルタイム検知</h3>
+        <h3>リアルタイム検知</h3>
         <p>AIが人の動きを正確に認識します。</p>
       </div>
       <div class="feature-card2">
-        <h3>📧 即時メール通知</h3>
+        <h3>即時メール通知</h3>
         <p>異常があればすぐにあなたのスマホへ。</p>
       </div>
       <div class="feature-card3">
-        <h3>🔒 プライバシー保護</h3>
+        <h3>プライバシー保護</h3>
         <p>映像はサーバーに保存されません。</p>
       </div>
     </section>
@@ -39,7 +39,7 @@
 .home-container { padding-top: 80px; text-align: center; }
 
 /* ヒーローセクション */
-.hero { padding: 60px 20px; background-image: url(image/pc.jpg); border-radius: 8px;}
+.hero { padding: 60px 20px; background-image: url(/image/pc.jpg); border-radius: 8px;}
 .hero h1 { font-size: 2.5rem; margin-bottom: 20px; color: rgba(155, 255, 130, 0.821); }
 .hero p { font-size: 1.2rem; margin-bottom: 30px; color: #ffffff; }
 .cta-button {
@@ -75,9 +75,9 @@
   background-position: center;
 }
 
-.feature-card1 { background-image: url(image/webcam.jpg); }
-.feature-card2 { background-image: url(image/mail.jpg); }
-.feature-card3 { background-image: url(image/sec.jpg); }
+.feature-card1 { background-image: url(/image/webcam.jpg); }
+.feature-card2 { background-image: url(/image/mail.jpg); }
+.feature-card3 { background-image: url(/image/sec.jpg); }
 
 /* ▼▼▼ 追加したダウンロードセクションのスタイル ▼▼▼ */
 .download-section {

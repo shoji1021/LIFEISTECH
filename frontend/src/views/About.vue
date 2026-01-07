@@ -14,8 +14,32 @@
 </template>
 
 <style scoped>
-    h1{
-        color: rgba(155, 255, 130, 0.821);
-    }
-.page-content {margin: 150px 30px; padding: 80px 30px; width: 100%;  line-height: 1.8; background-image: url(image/pc.jpg); color: #ffffff; border-radius: 8px;}
+h1 {
+    color: rgba(155, 255, 130, 0.821);
+    /* タイトルも中央揃えにしたい場合は以下を追加 */
+    text-align: center;
+}
+
+.page-content {
+    /* ★変更点1: 幅を制限する (例: 800px) */
+    max-width: 800px;
+    width: 100%; /* スマホなど狭い画面では幅いっぱいに合わせる */
+
+    /* ★変更点2: 左右の余白を自動(auto)にして中央寄せにする */
+    margin: 150px auto;
+
+    /* 元のスタイル */
+    padding: 80px 30px;
+    line-height: 1.8;
+    background-image: url(/image/pc.jpg);
+    /* 背景画像を綺麗に表示するための追加設定（推奨） */
+    background-size: cover;
+    background-position: center;
+    
+    color: #ffffff;
+    border-radius: 8px;
+    
+    /* パディングを含めた幅計算にする（レイアウト崩れ防止） */
+    box-sizing: border-box; 
+}
 </style>
