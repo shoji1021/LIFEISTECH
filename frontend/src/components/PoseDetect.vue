@@ -7,7 +7,7 @@
         <button type="submit" style="padding: 10px; background-color: blue; color: white;">設定</button>
       </form>
     </div>
-    <div style="position: absolute; left: 50%; top: 30px; width: 640px; height: 480px; transform: translateX(-50%);">
+    <div class="video-container" style="position: absolute; left: 50%; top: 30px; width: 640px; height: 480px; transform: translateX(-50%);">
       <video ref="video" autoplay playsinline width="640" height="480"
         style="transform: scaleX(-1); position: absolute; left: 0; top: 0; z-index: 1;"></video>
       <canvas ref="canvas" width="640" height="480"
@@ -166,3 +166,61 @@ onMounted(async () => {
   detect()
 })
 </script>
+
+<style scoped>
+/* 全体のラッパー */
+.camera-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 画面いっぱいに */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 設定フォーム */
+.mail-pass {
+  position: absolute;
+  bottom: 100px; /* ボタンとかぶらない位置 */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  width: 90%; /* スマホで横幅いっぱい */
+  max-width: 400px;
+  z-index: 10;
+  text-align: center;
+}
+
+.mail-pass input {
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 8px;
+  background: #222;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+/* ビデオコンテナ（ここが重要！） */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 640px; /* PCではこれ以上大きくならない */
+  aspect-ratio: 4 / 3; /* 4:3の比率を維持 */
+}
+
+/* ビデオとキャンバスをレスポンシブに重ねる */
+.responsive-video,
+.responsive-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  /* コンテナに合わせて伸縮 */
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1); /* 鏡面反転 */
+}
+</style>

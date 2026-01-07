@@ -14,5 +14,8 @@
 </template>
 
 <style scoped>
-.page-content { padding: 100px 20px; max-width: 800px; margin: 0 auto; line-height: 1.8; background-color: white; color: #555; padding: 20px; border-radius: 8px;}
+    h1{
+        color: rgba(155, 255, 130, 0.821);
+    }
+.page-content { padding: 80px 30px; width: 100%; margin: 0 auto; line-height: 1.8; background-image: url(image/pc.jpg); color: #ffffff; border-radius: 8px;}
 </style>

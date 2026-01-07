@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="logo">
-      <router-link to="/">Security Keeper</router-link>
+      <router-link to="/">Motion Detection</router-link>
     </div>
     <ul class="nav-links">
       <li><router-link to="/">ホーム</router-link></li>

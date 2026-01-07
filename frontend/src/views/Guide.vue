@@ -51,7 +51,7 @@
 }
 
 .step-item {
-  background: #f4f4f4;
+  background-image: url(image/pc.jpg);
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -76,6 +76,10 @@
 }
 
 .steps p {
-    color: #555;
+    color: #ffffffcd;
+}
+
+h1{
+    color: rgba(155, 255, 130, 0.821);
 }
 </style>

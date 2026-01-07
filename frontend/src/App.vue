@@ -27,3 +27,29 @@ const isAppPage = computed(() => {
   return route.path === '/app' 
 })
 </script>
+
+<style scoped>
+  /* --- スマホ対応 (画面幅 768px 以下) --- */
+@media (max-width: 768px) {
+  /* ページ全体の余白を減らす */
+  .page {
+    padding: 20px 15px; /* 上下20px, 左右15px */
+    width: auto; /* 幅を固定しない */
+  }
+
+  /* 見出しを少し小さく */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  /* ボタンを押しやすく大きく */
+  .floating-btn {
+    width: 90%; /* 画面いっぱい */
+    left: 5%;
+    right: 5%;
+    bottom: 20px;
+    text-align: center;
+    padding: 15px;
+  }
+}
+</style>

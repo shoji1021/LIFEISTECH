@@ -79,15 +79,32 @@ const cubeStyle = computed(() => {
   }
 })
 
+const handleTouchMove = (e) => {
+  // タッチの1本目の指の情報を取得
+  const touch = e.touches[0]
+  
+  // マウスイベントと同じ形式にして既存の関数に渡す
+  handleMouseMove({
+    clientX: touch.clientX,
+    clientY: touch.clientY
+  })
+}
+
 onMounted(() => {
   window.addEventListener('mousemove', handleMouseMove)
+  // ↓ スマホ用のタッチイベントを追加
+  window.addEventListener('touchmove', handleTouchMove)
   updateLoop()
 })
 
 onUnmounted(() => {
   window.removeEventListener('mousemove', handleMouseMove)
+  // ↓ 削除も忘れずに
+  window.removeEventListener('touchmove', handleTouchMove)
   cancelAnimationFrame(animationId)
 })
+
+
 </script>
 
 <style scoped>
@@ -149,4 +166,28 @@ onUnmounted(() => {
 .left   { transform: rotateY(-90deg) translateZ(50px); }
 .top    { transform: rotateX(90deg) translateZ(50px); }
 .bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+/* スマホでの位置とサイズ調整 */
+@media (max-width: 768px) {
+  .scene-container {
+    bottom: auto; /* 下固定を解除 */
+    top: 60px;    /* 上に持ってくる（ナビバーの下あたり） */
+    right: 20px;
+    width: 80px;  /* 全体的に小さく */
+    height: 80px;
+  }
+  
+  .cube, .face {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* 面の位置調整（50pxの半分 = 25px） */
+  .front  { transform: translateZ(25px); }
+  .back   { transform: rotateY(180deg) translateZ(25px); }
+  .right  { transform: rotateY(90deg) translateZ(25px); }
+  .left   { transform: rotateY(-90deg) translateZ(25px); }
+  .top    { transform: rotateX(90deg) translateZ(25px); }
+  .bottom { transform: rotateX(-90deg) translateZ(25px); }
+}
 </style>
