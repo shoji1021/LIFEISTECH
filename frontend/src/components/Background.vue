@@ -101,4 +101,6 @@ onUnmounted(() => {
   z-index: -1; /* 最背面に配置 */
   background-color: black;
 }
+
+
 </style>

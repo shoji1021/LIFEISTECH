@@ -50,7 +50,9 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   width: 300px;
-  color: #ffffff;
+  color: white;
+	-webkit-text-stroke: 1px #F8F8F8;
+	text-shadow: 0px 1px 4px #23430C;
 }
 
 .feature-card2 {
@@ -59,7 +61,9 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   width: 300px;
-  color: #ffffff;
+  color: white;
+	-webkit-text-stroke: 1px #F8F8F8;
+	text-shadow: 0px 1px 4px #23430C;
 }
 
 .feature-card3 {
@@ -68,7 +72,9 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   width: 300px;
-  color: #ffffff;
+  color: white;
+	-webkit-text-stroke: 1px #F8F8F8;
+	text-shadow: 0px 1px 4px #23430C;
 }
 
 

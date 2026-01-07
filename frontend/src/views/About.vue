@@ -17,5 +17,5 @@
     h1{
         color: rgba(155, 255, 130, 0.821);
     }
-.page-content { padding: 80px 30px; width: 100%; margin: 0 auto; line-height: 1.8; background-image: url(image/pc.jpg); color: #ffffff; border-radius: 8px;}
+.page-content {margin: 150px 30px; padding: 80px 30px; width: 100%;  line-height: 1.8; background-image: url(image/pc.jpg); color: #ffffff; border-radius: 8px;}
 </style>
