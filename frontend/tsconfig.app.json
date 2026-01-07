@@ -4,6 +4,7 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     
     /* Linting */
+    "noEmit": true,
     "skipLibCheck": true,
     "strict": true,
     "noUnusedLocals": true,

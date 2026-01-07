@@ -1,13 +1,13 @@
 // src/router/index.ts
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
-// コンポーネントのインポート（まだ作成していない場合はコメントアウトしておいてください）
+// コンポーネントのインポート
+// ★重要: 実際のファイル名と合わせてください
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
-import Guide from '../views/Guide.vue'
-import AppTool from '../views/AppTool.vue'
+import About from '../views/About.vue' // まだ作ってないならコメントアウト
+import Guide from '../views/Guide.vue' // まだ作ってないならコメントアウト
+import AppMain from '../views/AppTool.vue' 
 
-// ルートの定義に型をつける
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -26,8 +26,8 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/app',
-    name: 'AppTool',
-    component: AppTool
+    name: 'App', // ここも名前を統一
+    component: AppMain
   }
 ]
 
