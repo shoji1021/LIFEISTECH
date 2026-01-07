@@ -1,37 +1,38 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-// src/router/index.ts
-var vue_router_1 = require("vue-router");
-// コンポーネントのインポート（まだ作成していない場合はコメントアウトしておいてください）
-var Home_vue_1 = require("../views/Home.vue");
-var About_vue_1 = require("../views/About.vue");
-var Guide_vue_1 = require("../views/Guide.vue");
-var AppTool_vue_1 = require("../views/AppTool.vue");
-// ルートの定義に型をつける
-var routes = [
-    {
-        path: '/',
-        name: 'Home',
-        component: Home_vue_1.default
-    },
-    {
-        path: '/about',
-        name: 'About',
-        component: About_vue_1.default
-    },
-    {
-        path: '/guide',
-        name: 'Guide',
-        component: Guide_vue_1.default
-    },
-    {
-        path: '/app',
-        name: 'AppTool',
-        component: AppTool_vue_1.default
-    }
-];
-var router = (0, vue_router_1.createRouter)({
-    history: (0, vue_router_1.createWebHistory)(),
-    routes: routes
-});
+import { createRouter, createWebHistory } from 'vue-router'
+
+// コンポーネントのインポート
+// ※ 注意: 実際にこの場所にファイルがないとエラーになります
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import Guide from '../views/Guide.vue'
+import AppTool from '../views/AppTool.vue'
+
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
+  },
+  {
+    path: '/guide',
+    name: 'Guide',
+    component: Guide
+  },
+  {
+    path: '/app',
+    name: 'AppTool',
+    component: AppTool
+  }
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+})
+
 export default router
