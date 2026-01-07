@@ -24,7 +24,7 @@
     <section class="download-section">
       <div class="download-box">
         <h2>デスクトップ版アプリ (Windows)</h2>
-        <p>ブラウザを開かずに監視を行いたい方は、<br>ダウンロード後即実行可能なデスクトップ版をご利用ください。</p>
+        <p>ブラウザを開かずに監視を行いたい方は、<br>ダウンロード後即実行可能なデスクトップ版をご利用ください。<br>（キャプチャ機能搭載）</p>
         
         <a href="https://github.com/shoji1021/SENDMAIL/releases/download/Ver0.1/sendmail.exe" class="download-btn">
           <span class="icon">⬇</span> Windows版 (EXE) をダウンロード
