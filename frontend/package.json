@@ -12,7 +12,8 @@
     "@mediapipe/holistic": "^0.5.1675471629",
     "@mediapipe/pose": "^0.5.1675469404",
     "axios": "^1.10.0",
-    "vue": "^3.5.17"
+    "vue": "^3.5.17",
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.0",
